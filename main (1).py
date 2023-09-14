@@ -1,12 +1,15 @@
-# program to determine whether the given year is leap year or not
+'''Implement a class called Player that represents a cricket player. The Player class should have a method called play which prints "The player is playing cricket. Derive two classes, Batsman and Bowler, from the Plas class. Override the play() method in each derived class to print "The batman is batting" and "The bowler is bowling", respectively. Write a program to create objects of both the Batsman and Bowler classes and call the play() method for each object.'''
 
-def isLeapYear(year):
-  if(year%4==0 and year%10!=0) or year%400==0:
-     return True
-  else:
-     return False
-year=2024
-if isLeapYear(year):
-  print('{} is a leap year.'.format(year))
-else:
-  print('{} is not a leap year.'.format(year))
+class Player:
+  def play(self):
+    print("The player is playing cricket.")
+class Batsman (Player):
+  def play(self):
+    print("The batsman is batting.")
+class Bowler (Player):
+  def play(self):
+    print("The bowler is bowling.")
+batsman = Batsman()
+bowler = Bowler()
+batsman.play()
+bowler.play()
